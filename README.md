@@ -24,7 +24,6 @@
 
 **Wires** - Block Diagram에서 데이터의 흐름을 나타내는 선. 데이터가 함수로 전달되거나 연결될 때, 이들을 통해 데이터의 흐름을 확인할 수 있음 <br>
 
-
 ## **🛠 LabVIEW 시작하기**
 1. LabVIEW 소프트웨어 설치: 먼저 National Instruments 또는 NI 웹사이트에서 LabVIEW 소프트웨어를 다운로드하고 설치(일반적으로 라이센스를 구입하거나 평가판을 다운로드하여 설치할 수 있음) <br>
 **📌LabVIEW 다운로드 사이트 :** https://www.ni.com/ko/support/downloads/software-products/download.labview.html#521715 <br>
@@ -34,81 +33,5 @@
 5. 프로그래밍 및 디자인: LabVIEW에서 VI를 디자인하고 프로그래밍하는 방법을 익혀야함. LabVIEW는 그래픽 프로그래밍 언어이기 때문에, 프로그램을 작성할 때 마우스로 요소들을 드래그하고 놓아서 연결하고 구성할 수 있음 <br>
 6. 실행 및 테스트: VI를 작성한 후에는 실행하여 프로그램이 예상대로 동작하는지 확인. 오류가 발생하거나 수정해야 할 부분이 있으면 다시 수정하고 테스트 <br>
 
-**✨ node.js 설치 이유 : create-react-app 라이브러리 때문**
-- node.js 설치하면 npm(Node Package Manager)을 통해 다양한 라이브러리와 모듈을 손쉽게 관리할 수 있음
-- npm으로 create-react-app 이용
-  
-**✨ 데이터 바인딩**
-- 변수에 넣기
-- state에 넣기
-- 이벤트 핸들러를 통한 데이터 바인딩
-- Props를 이용한 데이터 바인딩
-
-**✨ state** 
-- state(state가 변경되면 HTML이 재렌더링 됨)
-1. 변수 대신 쓰는 데이터 저장공간
-2. useState()를 이용해 만들어야함 ```[state 데이터, state 데이터 변경 함수]```
-- state 사용하기
-1. {useState} 상단에 첨부 ```import React, { useState } from 'react';```
-2. useState(데이터)
-3. 문자, 숫자, array, object 다 저장가능 <br>
-```let [글제목, 글제목변경] = useState(['여자 옷 추천', '수원 맛집']);```
-{글제목[1]} -> 하면 여자 옷 추천 출력 <br>
-<자주 바뀌는, 중요한 데이터를 변수 말고 state로 저장해서 쓰기>
-- 데이터 수정 방법
-1. 기존 state 카피본 만들기
-2. 카피본에 수정사항 반영하기
-3. 변경함수()에 집어넣기
-
-**✨ onClick** <br>
-```onClick={클릭될 때 실행할 함수}``` <br>
-```onClick ={()=>{실행할 내용}}```
-
-
-## **✨ Component** <br>
-- 리액트에서의 Component는 UI를 구성하는 요소로서 독립적이고 재사용 가능한 코드 블록
-- 각각의 컴포넌트는 자체적으로 상태(state)와 속성(props)을 가질 수 있으며, 이를 통해 동적이고 유연한 UI를 만들 수 있음
-- Component 만드는 법(funtcion App() 끝나는 부분에 작성, function App()도 일종의 Component)
-1. 함수 만들고 이름짓고
-2. 축약을 원하는 HTML 넣고
-3. 원하는 곳에서 <함수명/>
-- Component 유의사항
-1. 이름은 대괄호
-2. return() 안에 있는건 태그하나로 묶어야함
-3. 하나의 div 태그로 묶기 싫다면 <>, </>로 묶기
-- Component로 묶으면 좋은 것
-1. 반복 출현하는 HTML 덩어리들
-2. 자주 변경되는 HTML UI들
-
-**✨ Component 타입**
-- 함수형 컴포넌트 (Functional Components): ES6의 화살표 함수나 일반 함수를 사용하여 정의되며, 주로 상태나 생명주기 메서드가 필요하지 않은 단순한 컴포넌트에 사용됨
-
-- 클래스형 컴포넌트 (Class Components): ES6의 클래스를 사용하여 정의되며, 상태나 생명주기 메서드 등의 기능을 활용할 수 있음
-
-## **✨ Props(properties의 줄임말)** <br>
--  React 컴포넌트 간에 데이터를 전달하는 메커니즘
-
-```import React from 'react';
-부모 컴포넌트
-import ChildComponent from './ChildComponent';
-
-function ParentComponent() {
-    const name = "John";
-    return (
-        <ChildComponent name={name} />
-    );
-}
-
-자식 컴포넌트
-import React from 'react';
-
-function ChildComponent(props) {
-    return (
-        <p>Hello, {props.name}!</p>
-    );
-}
-
-// 렌더링 결과
-<p>Hello, John!</p>
 
 
